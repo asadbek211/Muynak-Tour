@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_bottom_nav"
+        android:id="@+id/bottomNav"
+        android:name="com.bizmiz.moynaktour.ui.BottomNavFragment"
+        android:label="BottomNavFragment" >
+        <action
+            android:id="@+id/bottomNav_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/bottomNav_to_language"
+            app:destination="@id/language" />
+        <action
+            android:id="@+id/bottomNav_to_about"
+            app:destination="@id/about" />
+        <action
+            android:id="@+id/bottomNav_to_more"
+            app:destination="@id/more" />
+        <action
+            android:id="@+id/action_bottomNav_to_categoryData"
+            app:destination="@id/categoryData" />
+        <action
+            android:id="@+id/action_bottomNav_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.bizmiz.moynaktour.ui.home.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        tools:layout="@layout/fragment_language"
+        android:id="@+id/language"
+        android:name="com.bizmiz.moynaktour.ui.settings.main.language.LanguageFragment"
+        android:label="LanguageFragment" />
+    <fragment
+        tools:layout="@layout/fragment_about"
+        android:id="@+id/about"
+        android:name="com.bizmiz.moynaktour.ui.settings.main.about.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        tools:layout="@layout/fragment_more"
+        android:id="@+id/more"
+        android:name="com.bizmiz.moynaktour.ui.home.best_places.more.MoreFragment"
+        android:label="MoreFragment" >
+        <action
+            android:id="@+id/action_more_to_details"
+            app:destination="@id/details" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_cat_data"
+        android:id="@+id/categoryData"
+        android:name="com.bizmiz.moynaktour.ui.home.category_data.CategoryDataFragment"
+        android:label="CategoryDataFragment" >
+        <action
+            android:id="@+id/action_categoryData_to_details"
+            app:destination="@id/details" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_search"
+        android:id="@+id/searchFragment"
+        android:name="com.bizmiz.moynaktour.ui.home.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_details"
+            app:destination="@id/details" />
+    </fragment>
+    <fragment
+        android:id="@+id/startLanguageFragment"
+        android:name="com.bizmiz.moynaktour.ui.start.start_language.StartLanguageFragment"
+        android:label="fragment_start_language"
+        tools:layout="@layout/fragment_start_language" >
+        <action
+            android:id="@+id/action_startLanguageFragment_to_startLocationFragment"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/startLanguageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_start_location"
+        android:id="@+id/startLocationFragment"
+        android:name="com.bizmiz.moynaktour.ui.start.start_location.StartLocationFragment"
+        android:label="StartLocationFragment" >
+        <action
+            android:id="@+id/action_startLocationFragment_to_bottomNav"
+            app:destination="@id/bottomNav"
+            app:popUpTo="@id/startLocationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_splash"
+        android:id="@+id/splashFragment"
+        android:name="com.bizmiz.moynaktour.ui.start.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_startLanguageFragment"
+            app:destination="@id/startLanguageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_bottomNav"
+            app:destination="@id/bottomNav"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

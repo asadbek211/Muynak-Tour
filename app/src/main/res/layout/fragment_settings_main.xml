@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="40dp"
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/settings_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/settings_shape"
+            android:padding="10dp"
+            android:src="@drawable/ic_language"
+            app:tint="@color/secondary_color" />
+
+        <TextView
+            android:id="@+id/txtLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milliard_medium"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/language"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            app:drawableEndCompat="@drawable/settings_icon_arrow_right" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/privacyPolicy"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/settings_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/share">
+
+        <ImageView
+            android:backgroundTint="#ECEBFF"
+            android:background="@drawable/settings_shape"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="11dp"
+            app:tint="#5732FB"
+            android:src="@drawable/insurance_policy" />
+
+        <TextView
+            android:id="@+id/txtFaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milliard_medium"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            app:drawableEndCompat="@drawable/settings_icon_arrow_right" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="25dp"
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/settings_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/language">
+
+        <ImageView
+            android:backgroundTint="#E7F8FF"
+            android:background="@drawable/settings_shape"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="12dp"
+            android:src="@drawable/share"
+            app:tint="#1BA3EB" />
+
+        <TextView
+            android:id="@+id/txtShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milliard_medium"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/share"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            app:drawableEndCompat="@drawable/settings_icon_arrow_right" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="25dp"
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/settings_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privacyPolicy">
+
+        <ImageView
+            android:backgroundTint="#FFE6ED"
+            android:background="@drawable/settings_shape"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            app:tint="#F32959"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milliard_medium"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            app:drawableEndCompat="@drawable/settings_icon_arrow_right" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/settings_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/settings_shape"
+            android:backgroundTint="#D9E2F8"
+            android:padding="10dp"
+            android:src="@drawable/ic_support"
+            app:tint="#2560F6" />
+
+        <TextView
+            android:id="@+id/txtSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milliard_medium"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/support"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            app:drawableEndCompat="@drawable/settings_icon_arrow_right" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
